@@ -1,0 +1,49 @@
+{
+  "name": "mcp-logger",
+  "version": "1.0.0",
+  "description": "Structured logging proxy for MCP servers — transparent stdio proxy with JSON-RPC message logging, timing, and filtering",
+  "type": "module",
+  "bin": {
+    "mcp-logger": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "logger",
+    "proxy",
+    "stdio",
+    "json-rpc",
+    "debugging"
+  ],
+  "author": "okirmio-create",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okirmio-create/mcp-logger.git"
+  }
+}
